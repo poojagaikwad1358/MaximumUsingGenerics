@@ -21,4 +21,8 @@ public class Maximum < E extends Comparable<E> > {
         System.out.println("Max Float= " + testMaximumValue(6.1f, 4.2f, 5.3f, 2.1f));
         System.out.println("Max String= "+ testMaximumValue("Apple", "Banana", "Mango", "Peach"));
     }
+
+    public static void main(String[] args) {
+        printMax();
+    }
 }
