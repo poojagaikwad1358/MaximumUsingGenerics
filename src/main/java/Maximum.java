@@ -1,50 +1,18 @@
-public class Maximum {
-    //Method to check maximum integer number between three integers.
-     public Integer testMaximumInteger (Integer x, Integer y, Integer z){
-            Integer maximumNumber = z;
+public class Maximum < E extends Comparable<E> > {
 
-            if (y.compareTo(maximumNumber) > 0) {
-                maximumNumber = y;
-            }
-            else if (x.compareTo(maximumNumber) > 0) {
-                maximumNumber = x;
-            }
-            else
-                maximumNumber = z;
+    E[] numbers;
+    public Maximum(E... numbers){
+        this.numbers = numbers;
+    }
 
+    //Method to check maximum integer, float & string number between three.
+    public static <E extends Comparable<E>> E testMaximumValue (E... numbers){
+            E maximumNumber = numbers[0];
+            for (E element : numbers) {
+                if (element.compareTo(maximumNumber) > 0) {
+                    maximumNumber = element;
+                }
+            }
             return maximumNumber;
         }
-
-     //Method to check maximum float number between three float numbers.
-     public Float testMaximumFloat (Float number1, Float number2, Float number3){
-         Float maximumFloat = number3;
-
-         if (number2.compareTo(maximumFloat) > 0) {
-             maximumFloat = number2;
-         }
-         else if (number1.compareTo(maximumFloat) > 0) {
-             maximumFloat = number1;
-         }
-         else
-             maximumFloat = number3;
-
-         return maximumFloat;
-     }
-
-     //Method to find maximum of 3 Strings.
-     public String testMaximumString (String x, String y, String z){
-         String maximumString = z;
-
-         if (y.compareTo(maximumString) > 0) {
-             maximumString = y;
-         }
-         else if (x.compareTo(maximumString) > 0) {
-             maximumString = x;
-         }
-         else
-             maximumString = z;
-
-         return maximumString;
-     }
-
 }
