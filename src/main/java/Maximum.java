@@ -30,4 +30,21 @@ public class Maximum {
 
          return maximumFloat;
      }
+
+     //Method to find maximum of 3 Strings.
+     public String testMaximumString (String x, String y, String z){
+         String maximumString = z;
+
+         if (y.compareTo(maximumString) > 0) {
+             maximumString = y;
+         }
+         else if (x.compareTo(maximumString) > 0) {
+             maximumString = x;
+         }
+         else
+             maximumString = z;
+
+         return maximumString;
+     }
+
 }
